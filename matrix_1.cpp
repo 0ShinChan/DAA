@@ -17,15 +17,15 @@ int main(){
         }
     }
     
-    //storing with list
-    vector<int> adj1[n];
-    for(int i=0;i<=m;i++){
-        int u,v;
-        cin>>u>>v;
-        adj1[u].push_back(v);
-        adj1[v].push_back(u);
+    // //storing with list
+    // vector<int> adj1[n];
+    // for(int i=0;i<=m;i++){
+    //     int u,v;
+    //     cin>>u>>v;
+    //     adj1[u].push_back(v);
+    //     adj1[v].push_back(u);
 
-    }
+    // }
 
     return 0;
 }

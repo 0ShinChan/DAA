@@ -13,18 +13,25 @@ int main(){
 
     file>>n;
     int ajd[10][10];
+    int graph1[n][n];
     for(int i=0;i<=n;i++){
         for(int j=0;j<=n;j++){
             file>>ajd[i][j];
         }
     }
-    for(int i=0;i<=n;i++){
+   
+     for(int i=0;i<=n;i++){
         for(int j=0;j<=n;j++){
-            printf("%3d",ajd[i][j]);
+
+            if(ajd[i][j]==1){
+                graph1[i][j]=1;
+            }
+            else{
+                graph1[i][j]=0;
+            }
+            cout<<graph1[i][j];
         }
         printf("\n");
     }
-
-    cout<<ajd[0][0];
 
 }
