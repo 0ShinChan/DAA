@@ -15,24 +15,22 @@ class graph{
         stack<int> st;
         
         st.push(s);
-
+        
         while(!st.empty()){
-            int s = st.top();
-
+            s=st.top();
             st.pop();
-            
-            if(!visited[s]){
 
+            if(!visited[s]){
                 visited[s]=true;
-                cout<< s <<" ";
+                cout<<s<<" ";
+
             }
-            for(auto i=adj[s].begin(); i!=adj[s].end();i++){
-                if(!visited[*i]){
-                    st.push(*i);
+            for(auto i : adj[s]){
+                if(!visited[i]){
+                    st.push(i);
                 }
             }
         }
-
     }
 };
 
@@ -42,16 +40,15 @@ int main(){
       
     g.addEdge(0, 1);
     g.addEdge(0, 2);
-    g.addEdge(1, 2);
-    g.addEdge(2, 0);
+    
     g.addEdge(2, 3);
-    g.addEdge(3, 3);
+    
  
     cout << "Following is Depth First Traversal"
             " (starting from vertex 2) \n";
  
     // Function call
-    g.dfs(2);
+    g.dfs(0);
 
     return 0;
  
